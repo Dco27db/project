@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Comedians
+{% endblock %}
+
+{% block main %}
+    <p>
+        <b>Username:</b> {{ username }}
+        <br/>
+    </p>
+    <p>
+        <b>Comedians:</b>
+    </p>
+{% for cname in comedians %}
+    {{ cname["comedian_name"] }}
+    <br/>
+{% endfor %}
+{% endblock %}
