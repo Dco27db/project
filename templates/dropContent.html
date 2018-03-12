@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Drop Content
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('dropContent') }}" method="post">
+        <fieldset>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="contentLink" placeholder="Content Link" type="text"/>
+            </div>
+                <button class="btn btn-default" type="submit">Drop</button>
+            </div>
+        </fieldset>
+    </form>
+{% endblock %}
