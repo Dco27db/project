@@ -109,7 +109,7 @@ def addContent():
             return apology("This content is already on My Content list!")
 
         # redirect to the user's myComedians list
-        return redirect(url_for("myComedians"))
+        return redirect(url_for("myContent"))
 
     # else if user reached via GET
     elif request.method == "GET":
