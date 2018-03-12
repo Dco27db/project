@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Comedians
+{% endblock %}
+
+{% block main %}
+    <p>
+        <b>Username:</b> {{ username }}
+        <br/>
+    </p>
+    <p>
+        <b>Content:</b>
+    </p>
+{% for comedian, contentName, contentType, contentSource, contentDate, contentLink in info %}
+    <b>Comedian:</b> {{ comedian["comedian_name"] }}
+    <b>Name:</b> {{ contentName["content_name"] }}
+    <b>Type:</b> {{ contentType["content_type"] }}
+    <b>Source:</b> {{ contentSource["content_source"] }}
+    <b>Date:</b> {{ contentDate["content_date"] }}
+    <b>Link:</b> {{ contentLink["content_link"] }}
+    <br/>
+{% endfor %}
+{% endblock %}
